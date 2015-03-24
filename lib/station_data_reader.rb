@@ -1,3 +1,4 @@
+require 'json'
 module StationDataReader
   def read_stations
       {
@@ -36,5 +37,9 @@ module StationDataReader
 
   def lowest_ranked_station
     read_stations.keys.map{|num| num.to_i }.min
+  end
+
+  def read_stations_from_file
+    JSON.parse(File.open("./data/stations.json").read)
   end
 end

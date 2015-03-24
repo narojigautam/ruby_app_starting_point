@@ -1,4 +1,3 @@
-require 'yaml'
 class TicketCounter < Model
   attribute :stations, Array[Station]
   include StationDataReader

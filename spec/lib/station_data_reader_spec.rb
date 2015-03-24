@@ -5,7 +5,7 @@ RSpec.describe StationDataReader, type: :module do
 
   describe "#read_stations" do
     it "reads data of stations" do
-      expect(data_reader.read_stations).to include({"1" => {name: 'Chennai Beach'}})
+      expect(data_reader.read_stations).to include( {"1" => {name: 'Chennai Beach'}} )
     end
   end
 
@@ -24,6 +24,13 @@ RSpec.describe StationDataReader, type: :module do
   describe "#lowest_ranked_station" do
     it "gives the lowest ranked stations" do
       expect(data_reader.lowest_ranked_station).to eq(1)
+    end
+  end
+
+  describe "#read_stations_from_file" do
+    it "reads stations data from a file" do
+      pending "not needed"
+      expect(data_reader.read_stations_from_file).to include( {"1" => {name: 'Chennai Beach'}} )
     end
   end
 end
